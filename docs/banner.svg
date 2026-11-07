@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="t d">
+  <title id="t">Caso Fechado</title>
+  <desc id="d">Banner do jogo de detetive Caso Fechado, com uma lupa rosa e o título sobre fundo escuro</desc>
+  <rect width="1200" height="300" fill="#220b1d"/>
+  <rect x="0" y="286" width="1200" height="14" fill="#ec4899"/>
+  <g transform="translate(150 150)" fill="none" stroke="#ec4899" stroke-width="14" stroke-linecap="round">
+    <circle cx="0" cy="-12" r="62"/>
+    <line x1="44" y1="32" x2="96" y2="84"/>
+  </g>
+  <text x="300" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" fill="#ffffff">Caso Fechado</text>
+  <text x="304" y="206" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#c4b5fd">Um jogo de detetive feito com lógica de verdade</text>
+</svg>
