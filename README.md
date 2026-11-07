@@ -62,7 +62,7 @@ npm install
 npm run dev
 ```
 
-O Vite mostra o endereço no terminal, normalmente http://localhost:5173.
+Quando o servidor iniciar, o Vite mostra no terminal o endereço para abrir no navegador, normalmente `http://localhost:5173`. Ele só funciona na sua máquina, enquanto o `npm run dev` estiver rodando.
 
 Outros comandos:
 
