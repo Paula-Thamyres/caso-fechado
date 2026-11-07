@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --page: #0f1218;
+  --panel-surface: #171c25;
+  --panel-border: #2a3140;
+  --ink: #e9e7e1;
+  --ink-heading: #ffffff;
+  --ink-muted: #a9a79d;
+  --accent: #f5b942;
+  --accent-strong: #d99a1f;
+  --accent-text: #f7cf7a;
+  --on-accent: #1d1503;
+  --danger: #fda4af;
+  --danger-border: #fb7185;
+  --success: #86efac;
+  --success-border: #4ade80;
+  --focus-ring: #67e8f9;
+  --hover-surface: #222937;
+  --note-surface: #1f1b12;
+  --control-border: #3b4458;
+}
+
+@theme inline {
+  --color-heading: var(--ink-heading);
+  --color-muted: var(--ink-muted);
+  --color-accent: var(--accent-text);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --color-panel-border: var(--panel-border);
+  --font-display: Georgia, 'Times New Roman', serif;
+}
+
+@layer base {
+  html {
+    font-size: 112.5%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .panel {
+    border: 1px solid var(--panel-border);
+    border-radius: 1rem;
+    background: var(--panel-surface);
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 0.7rem;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+      transform 120ms ease,
+      filter 120ms ease,
+      background-color 120ms ease;
+  }
+
+  .button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
+  .button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+
+  .button-primary {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  .button-primary:hover:not(:disabled) {
+    background: var(--accent-strong);
+  }
+
+  .button-secondary {
+    border-color: var(--control-border);
+    background: transparent;
+    color: var(--ink);
+  }
+
+  .button-secondary:hover:not(:disabled) {
+    background: var(--hover-surface);
+  }
+
+  .button-danger {
+    border-color: var(--danger-border);
+    background: transparent;
+    color: var(--danger);
+  }
+
+  .button-danger:hover:not(:disabled) {
+    background: rgb(251 113 133 / 0.14);
+  }
+
+  .clue-note {
+    border-left: 4px solid var(--accent);
+    border-radius: 0.25rem 0.75rem 0.75rem 0.25rem;
+    background: var(--note-surface);
+    padding: 0.7rem 0.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
